@@ -10,5 +10,10 @@ function showYourEmail() {
         alert("Please enter your email address"); 
     } 
     document.getElementById("poutPut").innerHTML = "Your email address is " + email; 
+}
 
+function showPriceWithTax() {
+    var price = Number(document.getElementById("price").value); 
+    var priceWithTax = price + price * 0.24; 
+    document.getElementById("withTax").innerHTML = "Final price with tax is " + priceWithTax.toFixed(2) + " euros !"; 
 }

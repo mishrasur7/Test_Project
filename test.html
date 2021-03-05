@@ -12,14 +12,34 @@
             <h1>This is a header</h1>
             <button onclick="showGreetings();">Greet me</button>
             <p id="pOutput">This paragraph will be changed</p>
-            <br />
+            <hr>
             <button onmouseover="showDateAndTime()">Show current date and time</button>
             <p id="pOutPut">Hover your mouse in show current date and time to see the effect</p>
-            <br>
+            <hr>
             <label>Enter your email</label>
-            <input type="text" id="textEmail">
+            <input type="email" id="textEmail">
             <button onclick="showYourEmail();">Submit</button>
             <p id="poutPut">Email will be shown here when the submit button is clicked</p>
+            <hr>
+            <h2>Show price with tax</h2>
+            <label>Original price:</label>
+            <input type="text" id="price">
+            <button onclick="showPriceWithTax();">Show price with tax</button>
+            <p id="withTax"></p>
+            <hr>
+            <form>
+            <h2>Input type try outs</h2>
+            <label>Male</label><input type="checkbox">
+            <lable>Female</lable> <input type="radio">
+            <label>Other</label> <input type="button">
+            <label>Young</label> <input type="text">
+            <label>Old</label> <input type="number">
+            <label>Color</label> <input type="color">
+            <label>Date</label> <input type="date">
+            <label>Date and time</label> <input type="datetime-local">
+            <label>Email</label> <input type="email">
+            </form>
+            <hr>
         </header>
 
         <main>
