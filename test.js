@@ -6,6 +6,9 @@ function showDateAndTime () {
 }
 function showYourEmail() {
     var email = document.getElementById("textEmail").value; 
+    if (isNaN(email) === false) {
+        alert("Please enter your email address"); 
+    } 
     document.getElementById("poutPut").innerHTML = "Your email address is " + email; 
 
 }
