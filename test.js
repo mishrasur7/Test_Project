@@ -27,3 +27,8 @@ function turnOnTheLight() {
 function turnOffTheLight() {
     document.getElementById("myImage").src = "images/bulboff.gif"; 
 }
+
+function styleChange() {
+    document.getElementById("style").style.fontSize = "50px"; 
+    document.getElementById("style").style.color = "red"; 
+}
