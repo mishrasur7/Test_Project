@@ -32,3 +32,7 @@ function styleChange() {
     document.getElementById("style").style.fontSize = "50px"; 
     document.getElementById("style").style.color = "red"; 
 }
+
+function changeColor() {
+    document.getElementById("color").style.color = "royalblue"; 
+}
