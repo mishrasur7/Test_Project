@@ -42,7 +42,7 @@ function showAgeCategory() {
     var age = Number(ageText); 
     var outPutText; 
     if (isNaN(age) === true || ageText === "") {
-        alert("Please kindly enter your age!"); 
+        alert("Please kindly enter your age in number format!"); 
     } else if (age < 0 || age > 122) {
         outPutText = "Please enter an age between 0 and 122"; 
     } else if (age > 0 && age < 19) {
