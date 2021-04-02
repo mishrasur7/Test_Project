@@ -36,3 +36,24 @@ function styleChange() {
 function changeColor() {
     document.getElementById("color").style.color = "royalblue"; 
 }
+//-------------------------------------------------------
+function showAgeCategory() {
+    var ageText = document.getElementById("age").value; 
+    var age = Number(ageText); 
+    var outPutText; 
+    if (isNaN(age) === true || ageText === "") {
+        alert("Please kindly enter your age!"); 
+    } else if (age < 0 || age > 122) {
+        outPutText = "Please enter an age between 0 and 122"; 
+    } else if (age > 0 && age < 19) {
+        outPutText = "You are minor citizen"; 
+    } else if (age > 18 && age < 66) {
+        outPutText = "You are an adult citizen"; 
+    } else {
+        outPutText = "You are senior citizen"; 
+    }
+    
+
+  
+    document.getElementById("ageOutPut").innerHTML = outPutText;  
+}
