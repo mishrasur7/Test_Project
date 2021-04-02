@@ -52,8 +52,5 @@ function showAgeCategory() {
     } else {
         outPutText = "You are senior citizen"; 
     }
-    
-
-  
     document.getElementById("ageOutPut").innerHTML = outPutText;  
 }
