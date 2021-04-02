@@ -54,3 +54,9 @@ function showAgeCategory() {
     }
     document.getElementById("ageOutPut").innerHTML = outPutText;  
 }
+//-------------------------------------------------------
+function randomNumber() {
+    var num = Math.floor(Math.random() * 51 + 50); 
+
+    document.getElementById("number").innerHTML = num; 
+}
