@@ -7,3 +7,8 @@ div {
     width: 25%;
     height: 25%;
 }
+
+#age1 {
+    background-color: aqua;
+    margin-left: 50%;
+}
