@@ -57,6 +57,5 @@ function showAgeCategory() {
 //-------------------------------------------------------
 function randomNumber() {
     var num = Math.floor(Math.random() * 51 + 50); 
-
     document.getElementById("number").innerHTML = num; 
 }
