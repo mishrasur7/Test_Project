@@ -67,9 +67,27 @@
             </div>
             <hr>
             <div>
-                <h2>Random number generator between 50 and 100</h2>
+                <h2>10 random number generator between 50 and 100</h2>
                 <button onclick="randomNumber();">Click me to get random numbers between 50 and 100</button>
                 <p id="number"></p>
+            </div>
+            <!------------------------------------------------------------------------------->
+            <hr>
+            <div>
+                <form>
+                    <span>Player's name</span>
+                    <input type="text" id="player">
+                    <input type="button" onclick="addPlayer();" value="Add">
+                    <br>
+                    <span>List player</span>
+                    <input type="button" onclick="listPlayer();" value="List player name">
+                    <p id="listplayer"></p>
+                    <br>
+                    <span>Search player</span>
+                    <input type="text" id="name">
+                    <input type="button" onclick="searchPlayer();" value="Search">
+                    <p id="pPlayer"></p>
+                </form>
             </div>
         </header>
 

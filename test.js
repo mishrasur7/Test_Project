@@ -57,7 +57,7 @@ function showAgeCategory() {
 //-------------------------------------------------------
 function randomNumber() {
     var i = 1; 
-    while (i <= 5) {
+    while (i <= 10) {
         var num = Math.floor(Math.random() * 51 + 50); 
         document.getElementById("number").innerHTML += num + "<br />"; 
         i++; 
@@ -65,6 +65,44 @@ function randomNumber() {
    
 }
 
-for (var i = 0; i < 10; i+=2) {
+for (var i = 0; i > -10; i-=2) {
     console.log(i); 
+}
+
+//-------------------------------------------------------
+var player = ["ram", "suraj", "sujan"];  
+
+function addPlayer() {
+    var inputPlayerName = document.getElementById("player").value;
+    if (inputPlayerName === "" || isNaN(inputPlayerName) === false) {
+        alert("Please put player's name in the field");
+        document.getElementById("player").value = ""; 
+
+    } else {
+        player.push(inputPlayerName); 
+        document.getElementById("player").value = ""; 
+    }
+}
+
+function listPlayer() {
+    for (var i = 0; i < player.length; i++){
+        document.getElementById("listplayer").innerHTML += player[i] + "<br />";  
+
+    }
+
+}
+
+function searchPlayer() {
+    var nameInput = document.getElementById("name").value; 
+    var count = 0; 
+    for (var i = 0; i < player.length; i++) {
+        if (nameInput === player[i]) {
+            count++; 
+        }
+    }
+    if (count === 0) {
+        document.getElementById("pPlayer").innerHTML = "Player doesn't exists."; 
+    } else {
+        document.getElementById("pPlayer").innerHTML = "Player exists."; 
+    }
 }
