@@ -65,10 +65,6 @@ function randomNumber() {
    
 }
 
-for (var i = 0; i > -10; i-=2) {
-    console.log(i); 
-}
-
 //-------------------------------------------------------
 var player = ["ram", "suraj", "sujan"];  
 
@@ -105,4 +101,34 @@ function searchPlayer() {
     } else {
         document.getElementById("pPlayer").innerHTML = "Player exists."; 
     }
+}
+
+//-------------------------------------------------------
+var numbers = []; 
+
+function addToList() {
+    var numText = document.getElementById("numbers").value; 
+    var num = Number(numText); 
+    if (numText === "" || isNaN(num) === true) {
+        alert("Please enter a valid number"); 
+    } else {
+        numbers.push(num);
+        document.getElementById("numbers").value = ""; 
+    }
+}
+function listNumbers() {
+    var outPutText = ""; 
+    for (var i= 0; i < numbers.length; i++) {
+        outPutText += numbers[i] + "<br />"; 
+    }
+    document.getElementById("listnumbers").innerHTML = outPutText; 
+}
+
+function calculateAverage() {
+    var sum = 0; 
+    for (var i = 0; i < numbers.length; i++) {
+        sum += numbers[i]; 
+    }
+    var average = sum / numbers.length; 
+    document.getElementById("average").innerHTML = "The average of the above list of numbers is " + average.toFixed(2); 
 }
