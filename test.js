@@ -132,3 +132,26 @@ function calculateAverage() {
     var average = sum / numbers.length; 
     document.getElementById("average").innerHTML = "The average of the above list of numbers is " + average.toFixed(2); 
 }
+
+function findMinimum() {
+    //Let us consider that the first value in the list is minimum
+    var minimum = numbers[0]; 
+    for (var i = 1; i < numbers.length; i++) {
+        if (minimum > numbers[i]) {
+            minimum = numbers[i]; 
+        }
+    }
+    document.getElementById("minimum").innerHTML = "The minimum value from the above list is " + minimum; 
+}
+
+function findMaximum() {
+    //Lets consider that the first occurance in the list is the maximum number.
+    var maximum = numbers[0]; 
+    for (var i = 0; i < numbers.length; i++) {
+        if (maximum < numbers[i]) {
+            maximum = numbers[i]; 
+        }
+    }
+    document.getElementById("maximum").innerHTML = "The maximum value from the above list is " + maximum; 
+
+}
