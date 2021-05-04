@@ -66,7 +66,7 @@ function randomNumber() {
 }
 
 //-------------------------------------------------------
-var player = ["ram", "suraj", "sujan"];  
+var players = [];  
 
 function addPlayer() {
     var inputPlayerName = document.getElementById("player").value;
@@ -75,32 +75,53 @@ function addPlayer() {
         document.getElementById("player").value = ""; 
 
     } else {
-        player.push(inputPlayerName); 
+        players.push(inputPlayerName); 
         document.getElementById("player").value = ""; 
     }
 }
 
 function listPlayer() {
-    for (var i = 0; i < player.length; i++){
-        document.getElementById("listplayer").innerHTML += player[i] + "<br />";  
+    for (var i = 0; i < players.length; i++){
+        document.getElementById("listplayer").innerHTML += players[i] + "<br />";  
 
     }
 
 }
 
 function searchPlayer() {
-    var nameInput = document.getElementById("name").value; 
-    var count = 0; 
-    for (var i = 0; i < player.length; i++) {
-        if (nameInput === player[i]) {
+   var nameInput = document.getElementById("name").value; 
+    var count = 0;
+    var outPutText; 
+    for (var i = 0; i < players.length; i++) {
+        if (nameInput === players[i]) {
             count++; 
+            outPutText = "Player exists"; 
         }
     }
     if (count === 0) {
-        document.getElementById("pPlayer").innerHTML = "Player doesn't exists."; 
-    } else {
-        document.getElementById("pPlayer").innerHTML = "Player exists."; 
-    }
+        outPutText = "Player doesn't exists."; 
+    } 
+
+    document.getElementById("pPlayer").innerHTML = outPutText; 
+  
+    /*
+   var nameInput = document.getElementById("name").value; 
+   var playerFound = false; 
+   var outPutText; 
+
+   for(var i = 0; i < player.length; i++) {
+       if(player[i] === nameInput) {
+           playerFound = true;
+           outPutText = "Player found, " + player[i]; 
+       }
+   }
+
+   if(playerFound === false) {
+       outPutText =  nameInput + " not founnd"; 
+   }
+
+   document.getElementById("pPlayer").innerHTML = outPutText; 
+   */
 }
 
 //-------------------------------------------------------
@@ -153,5 +174,29 @@ function findMaximum() {
         }
     }
     document.getElementById("maximum").innerHTML = "The maximum value from the above list is " + maximum; 
+
+}
+
+//-------------------------------------------------------
+var x = 15; 
+while(x >= 5) {
+    x = x - 7; 
+}
+document.getElementById("while").innerHTML = x; 
+
+//-------------------------------------------------------
+
+
+function calculateTotalOay() {
+    var hourInput = document.getElementById("hour").value; 
+    var hour = Number(hourInput); 
+    var totalPay; 
+    if(hour <= 8) {
+        totalPay = hour * 10; 
+    } else if(hour > 8) {
+        totalPay = 80 + (hour - 8) * 15; 
+    }
+
+    document.getElementById("result").innerHTML = totalPay; 
 
 }
