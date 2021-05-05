@@ -200,3 +200,24 @@ function calculateTotalOay() {
     document.getElementById("result").innerHTML = totalPay; 
 
 }
+
+//-------------------------------------------------------
+
+var teachers = ["suraj", "alpo", "mariia", "shova"]; 
+var ages = [23, 24, 17, 23]; 
+
+function findTeacher() {
+    var inputTeacher = document.getElementById("teacher").value; 
+    var teacherFound = false; 
+    var text; 
+    for(var i = 0; i < teachers.length; i++) {
+        if(teachers[i] === inputTeacher) {
+            teacherFound = true; 
+            text = teachers[i] + " found!"; 
+        }
+    }
+    if(teacherFound === false) {
+        text = inputTeacher + " not found!"; 
+    }
+    document.getElementById("presult").innerHTML = text; 
+}
