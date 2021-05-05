@@ -204,7 +204,7 @@ function calculateTotalOay() {
 //-------------------------------------------------------
 
 var teachers = ["suraj", "alpo", "mariia", "shova", "ram", "sujan", "kasper"]; 
-var ages = [23, 24, 10, 23, 50, 50, 50]; 
+var ages = [23, 24, 10, 23, 51, 52, 50]; 
 
 function findTeacher() {
     var inputTeacher = document.getElementById("teacher").value; 
@@ -271,4 +271,28 @@ function youngestTeacher() {
         }
     }
     document.getElementById("youngTeacher").innerHTML = outPutText; 
+}
+
+function secondOldest() {
+    var firstMaxSoFar = ages[0]; 
+    for(var i = 0; i < ages.length; i++) {
+        if(firstMaxSoFar < ages[i]) {
+            firstMaxSoFar = ages[i]; 
+        }
+    }
+    ages.pop(firstMaxSoFar); 
+
+    var secontMaxSoFar = ages[0]; 
+    for(var i = 0; i < ages.length; i++) {
+        if(secontMaxSoFar < ages[i]) {
+            secontMaxSoFar = ages[i]; 
+        }
+    }
+    var outPutText = ""; 
+    for(var i = 0; i < ages.length; i++) {
+        if(secontMaxSoFar === ages[i]) {
+            outPutText += teachers[i] + " is the second oldest with age " + secontMaxSoFar; 
+        }
+    }
+    document.getElementById("secondoldest").innerHTML = outPutText; 
 }
