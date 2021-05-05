@@ -193,7 +193,7 @@ function calculateTotalOay() {
     var totalPay; 
     if(hour <= 8) {
         totalPay = hour * 10; 
-    } else if(hour > 8) {
+    } else {
         totalPay = 80 + (hour - 8) * 15; 
     }
 

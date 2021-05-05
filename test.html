@@ -1,11 +1,13 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=3">
     <meta name="author" content="Suraj Mishra">
     <title>Test project</title>
     <link rel="stylesheet" type="text/css" href="test.css">
+
 <body>
     <div>
         <header>
@@ -28,16 +30,16 @@
             <p id="withTax"></p>
             <hr>
             <form>
-            <h2>Input type try outs</h2>
-            <label>Male</label><input type="checkbox">
-            <lable>Female</lable> <input type="radio">
-            <label>Other</label> <input type="button">
-            <label>Young</label> <input type="text">
-            <label>Old</label> <input type="number">
-            <label>Color</label> <input type="color">
-            <label>Date</label> <input type="date">
-            <label>Date and time</label> <input type="datetime-local">
-            <label>Email</label> <input type="email">
+                <h2>Input type try outs</h2>
+                <label>Male</label><input type="checkbox">
+                <lable>Female</lable> <input type="radio">
+                <label>Other</label> <input type="button">
+                <label>Young</label> <input type="text">
+                <label>Old</label> <input type="number">
+                <label>Color</label> <input type="color">
+                <label>Date</label> <input type="date">
+                <label>Date and time</label> <input type="datetime-local">
+                <label>Email</label> <input type="email">
             </form>
             <hr>
             <h2>Bulb on and off</h2>
@@ -46,10 +48,12 @@
             <button onclick="turnOffTheLight();">Turn off the light</button>
             <hr>
             <h2>Changing style with JavaScript</h2>
-            <p id="style">JavaScript can change the style of HTML element. Click below to see the change in font-size.</p>
+            <p id="style">JavaScript can change the style of HTML element. Click below to see the change in font-size.
+            </p>
             <button onclick="styleChange();">Click me</button>
             <h2>Changing style with JavaScript</h2>
-            <p id="style">JavaScript can change the style of HTML element. Click below to see the change in font-size.</p>
+            <p id="style">JavaScript can change the style of HTML element. Click below to see the change in font-size.
+            </p>
             <button onclick="styleChange();">Click me</button>
             <hr>
             <h2>Changing color of element</h2>
@@ -57,13 +61,13 @@
             <button onclick="changeColor();">Click me</button>
             <hr>
             <div id="age1">
-            <h2>Age classification</h2>
-            <form>
-            <span>Your age (0-122):</span>
-            <input type="text" id="age" size="5"/>
-            <input type="button" value="clasify my age" onclick="showAgeCategory();">
-            <p id="ageOutPut"></p>
-            </form>
+                <h2>Age classification</h2>
+                <form>
+                    <span>Your age (0-122):</span>
+                    <input type="text" id="age" size="5" />
+                    <input type="button" value="clasify my age" onclick="showAgeCategory();">
+                    <p id="ageOutPut"></p>
+                </form>
             </div>
             <hr>
             <div>
@@ -89,41 +93,68 @@
                     <p id="pPlayer"></p>
                 </form>
             </div>
-             <!------------------------------------------------------------------------------->
-             <hr>
-             <div>
-                 <form>
-                     <h1>Average, minimum and maximum calculator</h1>
-                     <span>Please enter number one by one and click add to list button</span>
-                     <input type="text" id="numbers">
-                     <input type="button" value="Add to List" onclick="addToList();">
-                     <br>
-                     <span>List numbers</span>
-                     <input type="button" value="List numbers" onclick="listNumbers();">
-                     <p id="listnumbers"></p>
-                     <br>
-                     <input type="button" value="Calculate Average" onclick="calculateAverage();">
-                     <p id="average"></p>
-                     <br>
-                     <input type="button" value="Find minimum" onclick="findMinimum();">
-                     <p id="minimum"></p>
-                     <br>
-                     <input type="button" value="Find maximum" onclick="findMaximum();">
-                     <p id="maximum"></p>
-                 </form>
-             </div>
-             <!------------------------------------------------------------------------------->
-             <div>
-                 While loop 
-                 <p id="while"></p>
-             </div>
-<!------------------------------------------------------------------------------->
-<div>
-    <label>Working hour</label>
-    <input type="text" id="hour">
-    <button onclick="calculateTotalOay();">Calculate total pay</button>
-    <p id="result"></p>
-</div>
+            <!------------------------------------------------------------------------------->
+            <hr>
+            <div>
+                <form>
+                    <h1>Average, minimum and maximum calculator</h1>
+                    <span>Please enter number one by one and click add to list button</span>
+                    <input type="text" id="numbers">
+                    <input type="button" value="Add to List" onclick="addToList();">
+                    <br>
+                    <span>List numbers</span>
+                    <input type="button" value="List numbers" onclick="listNumbers();">
+                    <p id="listnumbers"></p>
+                    <br>
+                    <input type="button" value="Calculate Average" onclick="calculateAverage();">
+                    <p id="average"></p>
+                    <br>
+                    <input type="button" value="Find minimum" onclick="findMinimum();">
+                    <p id="minimum"></p>
+                    <br>
+                    <input type="button" value="Find maximum" onclick="findMaximum();">
+                    <p id="maximum"></p>
+                </form>
+            </div>
+            <!------------------------------------------------------------------------------->
+            <div>
+                While loop
+                <p id="while"></p>
+            </div>
+            <!------------------------------------------------------------------------------->
+            <div>
+                <label>Working hour</label>
+                <input type="text" id="hour">
+                <button onclick="calculateTotalOay();">Calculate total pay</button>
+                <p id="result"></p>
+            </div>
+            <hr>
+            <!------------------------------------------------------------------------------->
+            <div>
+                <h1>Syncronize arrays logical operations </h1>
+                <label>Players</label>
+                <input type="text" id="playerName">
+                <br>
+                <label>Scores</label>
+                <input type="text" id="playerScore">
+                <br>
+                <label>Search Player</label>
+                <input type="text" id="nameSearch">
+                <button onclick="searchPlayer();">Search Player</button>
+                <p id="searchResult"></p>
+                <br>
+                <button onclick="findWinner();">Find the winner</button>
+                <p id="winnerResult"></p>
+                <br>
+                <button onclick="findLooser();">Find the looser</button>
+                <p id="looserResult"></p>
+                <br>
+                <button onclick="averageScore();">Find the average score of all players</button>
+                <p id="averageScore"></p>
+                <hr>
+
+            </div>
+
 
         </header>
 
@@ -144,4 +175,5 @@
     <script src="test.js"></script>
 </body>
 </head>
+
 </html>
