@@ -203,8 +203,8 @@ function calculateTotalOay() {
 
 //-------------------------------------------------------
 
-var teachers = ["suraj", "alpo", "mariia", "shova"]; 
-var ages = [23, 24, 17, 23]; 
+var teachers = ["suraj", "alpo", "mariia", "shova", "ram", "sujan"]; 
+var ages = [23, 24, 17, 23, 50, 50]; 
 
 function findTeacher() {
     var inputTeacher = document.getElementById("teacher").value; 
@@ -220,4 +220,30 @@ function findTeacher() {
         text = inputTeacher + " not found!"; 
     }
     document.getElementById("presult").innerHTML = text; 
+}
+
+function oldestAge() {
+    var oldestSoFar = ages[0]; 
+    var outPutText; 
+    for(var i = 0; i < ages.length; i++) {
+        if(oldestSoFar < ages[i]) {
+            oldestSoFar = ages[i]; 
+        }
+    }
+    for(var i = 0; i < ages.length; i++) {
+        if(oldestSoFar === ages[i]) {
+            outPutText = teachers[i] +  " is oldest. His age is " + oldestSoFar; 
+        } 
+    }
+
+    document.getElementById("ageResult").innerHTML = outPutText; 
+}
+
+function averageAge() {
+    var sum = 0; 
+    for(var i = 0; i < ages[i]; i++) {
+        sum += ages[i]/ages.length; 
+    }
+
+    document.getElementById("averageAge").innerHTML = "Average age of all teachers is " + sum.toFixed(2); 
 }
