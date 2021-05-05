@@ -247,3 +247,19 @@ function averageAge() {
 
     document.getElementById("averageAge").innerHTML = "Average age of all teachers is " + sum.toFixed(2); 
 }
+
+function youngestTeacher() {
+    var youngestAgeSoFar = ages[0];
+    var outPutText;  
+    for(var i = 0; i < ages.length; i++) {
+        if(youngestAgeSoFar > ages[i]) {
+            youngestAgeSoFar = ages[i]; 
+        }
+    }
+    for(var i = 0; i < ages.length; i++) {
+        if(youngestAgeSoFar === ages[i]) {
+            outPutText = teachers[i] + " is youngest. His age is " + youngestAgeSoFar; 
+        }
+    }
+    document.getElementById("youngTeacher").innerHTML = outPutText; 
+}
