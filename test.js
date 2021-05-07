@@ -272,7 +272,19 @@ function youngestTeacher() {
     }
     document.getElementById("youngTeacher").innerHTML = outPutText; 
 }
+//Finding the teachers who has age greater than 25 
 
+var teacherNameGreaterThanAge_25 = ""; 
+for(var i = 0; i < ages.length; i++) {
+    if(ages[i] > 25) {
+        teacherNameGreaterThanAge_25 += teachers[i] + " age " + ages[i] + ","; 
+    }
+}
+
+console.log(teacherNameGreaterThanAge_25); 
+
+
+//This solution is not working need to fix this more..
 function secondOldest() {
     var firstMaxSoFar = ages[0]; 
     for(var i = 0; i < ages.length; i++) {
@@ -296,3 +308,11 @@ function secondOldest() {
     }
     document.getElementById("secondoldest").innerHTML = outPutText; 
 }
+//-------------------------------------------------------
+
+
+var no = 4; 
+var yes = 7; 
+var no = yes; 
+yes = "2"; 
+console.log(no + yes); 
