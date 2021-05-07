@@ -204,7 +204,7 @@ function calculateTotalOay() {
 //-------------------------------------------------------
 
 var teachers = ["suraj", "alpo", "mariia", "shova", "ram", "sujan", "kasper"]; 
-var ages = [23, 24, 10, 23, 51, 52, 50]; 
+var ages = [23, 24, 10, 23, 51, 52, 52]; 
 
 function findTeacher() {
     var inputTeacher = document.getElementById("teacher").value; 
@@ -276,7 +276,7 @@ function youngestTeacher() {
 
 var teacherNameGreaterThanAge_25 = ""; 
 for(var i = 0; i < ages.length; i++) {
-    if(ages[i] > 25) {
+    if(ages[i] > 23) {
         teacherNameGreaterThanAge_25 += teachers[i] + " age " + ages[i] + ","; 
     }
 }
