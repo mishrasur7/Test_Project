@@ -57,3 +57,10 @@ for(var i = 0; i < scores.length; i++) {
  }
 
  console.log(outputText); 
+
+ //Finding the average score of all players
+
+ var average = sum/scores.length; 
+ console.log("Average score of all players is " + average.toFixed(2)); 
+
+ //finding the second highest score 
