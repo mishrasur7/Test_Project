@@ -41,4 +41,19 @@ for(var i = 0; i < scores.length; i++) {
  console.log(outPutText); 
 
  //Finding the minimum score and the player name with minimum score
- 
+ var minSoFar = scores[0]; 
+ var outputText; 
+
+ for(var i = 0; i < scores.length; i++) {
+     if(scores[i] < minSoFar) {
+         minSoFar = scores[i]; 
+     }
+ }
+
+ for(var i = 0; i < players.length; i++) {
+     if(minSoFar === scores[i]) {
+         outputText = players[i] + " has the minimum score " + minSoFar; 
+     }
+ }
+
+ console.log(outputText); 
