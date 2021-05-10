@@ -204,7 +204,7 @@ function calculateTotalOay() {
 //-------------------------------------------------------
 
 var teachers = ["suraj", "alpo", "mariia", "shova", "ram", "sujan", "kasper"]; 
-var ages = [23, 24, 10, 23, 51, 52, 52]; 
+var ages = [23, 24, 10, 23, 51, 53, 52]; 
 
 function findTeacher() {
     var inputTeacher = document.getElementById("teacher").value; 
@@ -287,32 +287,19 @@ console.log(teacherNameGreaterThanAge_25);
 //This solution is not working need to fix this more..
 function secondOldest() {
     var firstMaxSoFar = ages[0]; 
-    for(var i = 0; i < ages.length; i++) {
-        if(firstMaxSoFar < ages[i]) {
-            firstMaxSoFar = ages[i]; 
-        }
-    }
-    ages.pop(firstMaxSoFar); 
-
-    var secontMaxSoFar = ages[0]; 
-    for(var i = 0; i < ages.length; i++) {
-        if(secontMaxSoFar < ages[i]) {
-            secontMaxSoFar = ages[i]; 
-        }
-    }
-    var outPutText = ""; 
-    for(var i = 0; i < ages.length; i++) {
-        if(secontMaxSoFar === ages[i]) {
-            outPutText += teachers[i] + " is the second oldest with age " + secontMaxSoFar; 
-        }
-    }
+    var secondMax = undefined; 
+    
     document.getElementById("secondoldest").innerHTML = outPutText; 
 }
 //-------------------------------------------------------
 
+//This is just for testing purpose
+ 
+//-------------------------------------------------------
 
-var no = 4; 
-var yes = 7; 
-var no = yes; 
-yes = "2"; 
-console.log(no + yes); 
+
+var randomNum = "";
+for(var i = 0; i <= 10; i++) {
+    randomNum += Math.floor(Math.random() * 31 + 20) + "<br />"; 
+}
+console.log(randomNum); 
