@@ -12,7 +12,7 @@ for(var i = 0; i <= 10; i++) {
 
 
 var players = ["suraj", "shova", "sujan", "ram"]; 
-var scores = [107, 34, 15, 113]; 
+var scores = [107, 34, 185, 113]; 
 
 //finding the total scores of all players 
 
@@ -67,6 +67,24 @@ for(var i = 0; i < scores.length; i++) {
 
 
  function secondBiggest() {
+
+    var largestScoreSoFar = scores[0]; 
+    var secondLargestScoreSoFar = scores[1]; 
+    for(var i = 0; i < scores.length; i++) {
+        if(scores[i] > largestScoreSoFar) {
+            largestScoreSoFar = scores[i]; 
+        }
+    }
+    for(var i = 0; i < scores.length; i++) {
+        if(scores[i] > secondLargestScoreSoFar && largestScoreSoFar > secondLargestScoreSoFar) {
+            secondLargestScoreSoFar = scores[i]; 
+        }
+    }
+
+    
+    document.getElementById("result").innerHTML = "Second largest score is: " + secondLargestScoreSoFar; 
+    
+     /*
      if(scores.length >= 1) {
          var maxSoFar = scores[0]; 
          var secondBiggestSoFar = undefined; 
@@ -104,4 +122,5 @@ for(var i = 0; i < scores.length; i++) {
      } else {
         document.getElementById("result").innerHTML = "Error: Empty array!";  
      }
+     */
  }
