@@ -110,8 +110,18 @@ for(var i = 0; i < scores.length; i++) {
              }
          }
      }
+
+     //////////////////////
      console.log(winners);
      console.log(secondWinner); 
+
+     var a = {x:5,y:3,z:1}; 
+     var b = {x:2,y:9,z:1}; 
+
+     b.x = 7; 
+     b = a; 
+     a.x = a.x + b.x; 
+     console.log(b.x); 
 
 
 
