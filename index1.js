@@ -68,49 +68,51 @@ for(var i = 0; i < scores.length; i++) {
 
  function secondBiggest() {
      var students = ["suraj", "sujan", "shova", "alpo", "mariia"]; 
-     var points = [20, 30, 21, 45, 56]; 
+     var points = [20, 30, 21, 45, 56];
      if(points.length < 1) {
-         document.getElementById("result").innerHTML = "Empty array!"; 
+         console.log("Error: Empty array!"); 
      } else {
          var maxSoFar = points[0]; 
-         var secondBiggestSoFar = undefined; 
-
-         function updateIfBig(newValue) {
-             if((secondBiggestSoFar === undefined && newValue !== maxSoFar) || newValue > secondBiggestSoFar) {
-                 secondBiggestSoFar = newValue; 
-                 return secondBiggestSoFar; 
+         var secondMaxSoFar = undefined; 
+         //defining a function to return the value of second maximum points
+         function updateIfBigger(newValue) {
+             if((secondMaxSoFar === undefined && newValue !== maxSoFar) || newValue > secondMaxSoFar) {
+                 secondMaxSoFar = newValue; 
+                 return secondMaxSoFar; 
              }
          }
+         //finding the maximum and second maximum points
 
          for(var i = 0; i < points.length; i++) {
              if(points[i] > maxSoFar) {
                  var oldMaxSoFar = maxSoFar; 
-                 maxSoFar = points[i];
-                 secondBiggestSoFar = updateIfBig(oldMaxSoFar); 
-             } else if(scores[i] < maxSoFar) {
-                 secondBiggestSoFar = updateIfBig(scores[i]); 
+                 maxSoFar = points[i]; 
+                 secondMaxSoFar = updateIfBigger(oldMaxSoFar); 
+             } else if(points[i] < maxSoFar) {
+                 secondMaxSoFar = updateIfBigger(points[i]); 
              }
          }
-
+         //finding the winner
          var winners = "The winners are: "; 
-
          for(var i = 0; i < points.length; i++) {
              if(maxSoFar === points[i]) {
-                winners += students[i] + " with points " + points[i]; 
+                 winners += students[i] + " with points " + points[i]; 
              }
          }
-         var secondPlacers = "The second biggest are: "; 
 
-         if(secondBiggestSoFar !== undefined) {
+         //finding the second winner 
+         var secondWinner = "The second winners are: "; 
+         if(secondMaxSoFar !== undefined) {
              for(var i = 0; i < points.length; i++) {
-                 if(secondBiggestSoFar === points[i]) {
-                     secondPlacers += students[i] + " with points " + points[i]; 
+                 if(secondMaxSoFar === points[i]) {
+                     secondWinner += students[i] + " with points " + points[i]; 
                  }
              }
-
          }
-         document.getElementById("result").innerHTML = winners + "<br />" + secondPlacers; 
      }
+     console.log(winners);
+     console.log(secondWinner); 
+
 
 
 
