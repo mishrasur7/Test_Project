@@ -1,5 +1,5 @@
-var players = ["suraj", "ram", "shova", "sujan", "alpo", "alpo"]; 
-var scores = [10, 23, 43, 9, 13, 13]; 
+var players = ["suraj", "ram", "shova", "sujan", "alpo"]; 
+var scores = [10, 23, 43, 9, 13]; 
 
 //finding the player name 
 function searchPlayer() {
