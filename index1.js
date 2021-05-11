@@ -67,25 +67,78 @@ for(var i = 0; i < scores.length; i++) {
 
 
  function secondBiggest() {
+     var students = ["suraj", "sujan", "shova", "alpo", "mariia"]; 
+     var points = [20, 30, 21, 45, 56]; 
+     if(points.length < 1) {
+         document.getElementById("result").innerHTML = "Empty array!"; 
+     } else {
+         var maxSoFar = points[0]; 
+         var secondBiggestSoFar = undefined; 
 
-    var largestScoreSoFar = scores[0]; 
-    var secondLargestScoreSoFar = scores[1]; 
-    for(var i = 0; i < scores.length; i++) {
-        if(scores[i] > largestScoreSoFar) {
-            largestScoreSoFar = scores[i]; 
-        }
-    }
-    for(var i = 0; i < scores.length; i++) {
-        if(scores[i] > secondLargestScoreSoFar && largestScoreSoFar > secondLargestScoreSoFar) {
-            secondLargestScoreSoFar = scores[i]; 
-        }
-    }
+         function updateIfBig(newValue) {
+             if((secondBiggestSoFar === undefined && newValue !== maxSoFar) || newValue > secondBiggestSoFar) {
+                 secondBiggestSoFar = newValue; 
+                 return secondBiggestSoFar; 
+             }
+         }
 
-    
-    document.getElementById("result").innerHTML = "Second largest score is: " + secondLargestScoreSoFar; 
-    
-     /*
-     if(scores.length >= 1) {
+         for(var i = 0; i < points.length; i++) {
+             if(points[i] > maxSoFar) {
+                 var oldMaxSoFar = maxSoFar; 
+                 maxSoFar = points[i];
+                 secondBiggestSoFar = updateIfBig(oldMaxSoFar); 
+             } else if(scores[i] < maxSoFar) {
+                 secondBiggestSoFar = updateIfBig(scores[i]); 
+             }
+         }
+
+         var winners = "The winners are: "; 
+
+         for(var i = 0; i < points.length; i++) {
+             if(maxSoFar === points[i]) {
+                winners += students[i] + " with points " + points[i]; 
+             }
+         }
+         var secondPlacers = "The second biggest are: "; 
+
+         if(secondBiggestSoFar !== undefined) {
+             for(var i = 0; i < points.length; i++) {
+                 if(secondBiggestSoFar === points[i]) {
+                     secondPlacers += students[i] + " with points " + points[i]; 
+                 }
+             }
+
+         }
+         document.getElementById("result").innerHTML = winners + "<br />" + secondPlacers; 
+     }
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+     
+    /*
+    if(scores.length >= 1) {
          var maxSoFar = scores[0]; 
          var secondBiggestSoFar = undefined; 
 
@@ -122,5 +175,5 @@ for(var i = 0; i < scores.length; i++) {
      } else {
         document.getElementById("result").innerHTML = "Error: Empty array!";  
      }
-     */
+   */
  }
