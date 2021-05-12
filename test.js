@@ -251,10 +251,11 @@ function oldestAge() {
 function averageAge() {
     var sum = 0; 
     for(var i = 0; i < ages[i]; i++) {
-        sum += ages[i]/ages.length; 
+        sum += ages[i]; 
     }
+    var average = sum/ages.length; 
 
-    document.getElementById("averageAge").innerHTML = "Average age of all teachers is " + sum.toFixed(2); 
+    document.getElementById("averageAge").innerHTML = "Average age of all teachers is " + average.toFixed(2); 
 }
 
 function youngestTeacher() {

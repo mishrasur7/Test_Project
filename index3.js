@@ -76,3 +76,9 @@ if(hourInput.trim() === "" || isNaN(hourInput)) {
     console.log(totalSalary); 
 }
 }
+
+var total; 
+for(var i = 0; i <= 2; i++){
+    console.log(total += i); 
+}
+
