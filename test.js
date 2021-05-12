@@ -304,3 +304,14 @@ for(var i = 0; i <= 10; i++) {
     randomNum += Math.floor(Math.random() * 31 + 20) + "<br />"; 
 }
 console.log(randomNum); 
+
+a = [-2, -3, 4, 5, -2]; 
+var sum = 0; 
+
+for(var i = 0; i < a.length; i++) {
+    if(a[i] - (a[i]) === 0) {
+        sum += a[i]; 
+    }
+}
+
+console.log(sum); 
