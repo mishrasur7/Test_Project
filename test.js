@@ -304,6 +304,7 @@ for(var i = 0; i <= 10; i++) {
     randomNum += Math.floor(Math.random() * 31 + 20) + "<br />"; 
 }
 console.log(randomNum); 
+//-------------------------------------------------------
 
 a = [-2, -3, 4, 5, -2]; 
 var sum = 0; 
@@ -315,3 +316,11 @@ for(var i = 0; i < a.length; i++) {
     }
 }
 console.log(sum); 
+
+//-------------------------------------------------------
+var tasks = ["eat", "sleep", "dance", "cry", "walk", "play"]; 
+var hours = [3, 15, 7, 58, 2, 19]; 
+
+//lets print the tasks which hours are half of previous task hours 
+
+
