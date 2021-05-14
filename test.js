@@ -316,6 +316,22 @@ for(var i = 0; i < a.length; i++) {
     }
 }
 console.log(sum); 
+//-------------------------------------------------------
+//lets try to find out the length of any array without using the array.length method
+
+var array = [1, 2, 3, 4, 5, 6, 7, 8, 9]; 
+
+//lets create a function that will count each item in an array 
+function arrayLength(anyArray) {
+    var count = 0; 
+    while(array[count] !== undefined) {
+        count = count +1; 
+    }
+    return count; 
+}
+
+//now lets call the above arrayLength function in the console 
+console.log(arrayLength(array)); 
 
 //-------------------------------------------------------
 var tasks = ["eat", "sleep", "dance", "cry", "walk", "play"]; 
