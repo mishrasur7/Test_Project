@@ -15,7 +15,6 @@ function lengthOfArray(array) {
         length++; 
     }
     return length; 
-
 }
  var namesArrayLength = lengthOfArray(names); 
  console.log("The length of names array is: " + namesArrayLength); 
