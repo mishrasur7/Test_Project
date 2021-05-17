@@ -22,4 +22,6 @@ function lengthOfArray(array) {
 /*----------------------------------------------------------------------------*/
 /*----------------------------------------------------------------------------*/
 
+//Task 2 - The user has given a name as an input. search that name in array if it exits. 
 
+var nameInput 
