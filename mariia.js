@@ -19,9 +19,32 @@ function lengthOfArray(array) {
  var namesArrayLength = lengthOfArray(names); 
  console.log("The length of names array is: " + namesArrayLength); 
  //This solution should work for any array 
-/*----------------------------------------------------------------------------*/
-/*----------------------------------------------------------------------------*/
 
 //Task 2 - The user has given a name as an input. search that name in array if it exits. 
 
-var nameInput 
+
+function searchPlayer() {
+    var nameInput = document.getElementById("name").value; 
+//lets assume that initially name found is false
+
+var nameFound = false; 
+var outPutText; 
+
+for(var i = 0; i < names.length; i++) {
+    if(names[i] === nameInput) {
+        nameFound = true; 
+        outPutText = names[i] + " found!"; 
+    }
+}
+
+if(nameFound === false) {
+    outPutText = nameInput + " not found!"; 
+}
+document.getElementById("result").innerHTML = outPutText; 
+}
+/*----------------------------------------------------------------------------*/
+/*----------------------------------------------------------------------------*/
+//Task 3: 
+
+
+
